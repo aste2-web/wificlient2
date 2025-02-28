@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://10.0.0.1/client?page=dashboard -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>WiFi5-Soft| Client</title>
+    <link rel="icon" href="http://10.0.0.1/client/theme/img/i.ico?v=3.4.7">
+	<link rel="stylesheet" href="./WiFi5-Soft_ Client_files/font-awesome.min.css">
+    <link rel="stylesheet" href="./WiFi5-Soft_ Client_files/materialdesignicons.min.css">
+	<link rel="stylesheet" href="./WiFi5-Soft_ Client_files/vendor.bundle.base.css">
+    <link rel="stylesheet" href="./WiFi5-Soft_ Client_files/style.css">
+    <script type="text/javascript" src="./WiFi5-Soft_ Client_files/jquery.min.js.download"></script>
+	<script type="text/javascript" src="./WiFi5-Soft_ Client_files/toast.js.download"></script>
+    <script type="text/javascript" src="./WiFi5-Soft_ Client_files/socket.io.js.download"></script>
+	<script type="text/javascript" src="./WiFi5-Soft_ Client_files/global.js.download"></script>
+  </head>
+  <body class="" style="">
+    <div class="container-scroller">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar" style="z-index: 999999;">
+        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style="">
+          <a class="sidebar-brand brand-logo" href="http://10.0.0.1/client?page=dashboard">
+            <img src="./WiFi5-Soft_ Client_files/logo.png" alt="logo" style="object-fit: cover;">
+          </a>
+          <a class="sidebar-brand brand-logo-mini" href="http://10.0.0.1/client?page=dashboard">
+            <img src="./WiFi5-Soft_ Client_files/logo-min.png" alt="logo" style="object-fit: cover;">
+          </a>
+        </div>
+        <ul class="nav">
+          <li class="nav-item nav-category">
+            <span class="nav-link">Navigation</span>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="http://10.0.0.1/client?page=dashboard">
+              <span class="menu-icon">
+                <i class="mdi mdi-speedometer"></i>
+              </span>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+		  
+		  <li id="eload-parent" class="nav-item menu-items">
+		    <a class="nav-link" data-toggle="collapse" data-target="#eload-telco" aria-expanded="false" aria-controls="eload-telco">
+              <span class="menu-icon">
+                <i class="mdi mdi-cash"></i>
+              </span>
+              <span class="menu-title">Eload</span>
+              <i class="menu-arrow"></i>
+            </a>
+			<div class="collapse" id="eload-telco">
+				<ul class="nav flex-column sub-menu">
+					<li class="nav-item menu-items">
+						<a class="nav-link" data-toggle="collapse" data-target="#telco-smart" aria-expanded="false" aria-controls="telco-smart">
+							<span class="menu-icon">
+								<img src="./WiFi5-Soft_ Client_files/smart.png" alt="logo" style="object-fit: cover; width: 24px; height: 24px; background: white; border-radius: 100%;">
+							</span>
+							<span class="menu-title">Smart</span>
+							<i class="menu-arrow"></i>
+						</a>
+						<div class="collapse" id="telco-smart"><ul id="sub-menu-smart" class="nav flex-column sub-menu"></ul></div>
+					</li>
+					<li class="nav-item menu-items">
+						<a class="nav-link" data-toggle="collapse" data-target="#telco-globe" aria-expanded="false" aria-controls="telco-globe">
+							<span class="menu-icon">
+								<img src="./WiFi5-Soft_ Client_files/globe.png" alt="logo" style="object-fit: cover; width: 24px; height: 24px; background: white; border-radius: 100%;">
+							</span>
+							<span class="menu-title">Globe</span>
+							<i class="menu-arrow"></i>
+						</a>
+						<div class="collapse" id="telco-globe"><ul id="sub-menu-globe" class="nav flex-column sub-menu"></ul></div>
+					</li>
+					<li class="nav-item menu-items">
+						<a class="nav-link" data-toggle="collapse" data-target="#telco-sun" aria-expanded="false" aria-controls="telco-sun">
+							<span class="menu-icon">
+								<img src="./WiFi5-Soft_ Client_files/sun.png" alt="logo" style="object-fit: cover; width: 24px; height: 24px; background: white; border-radius: 100%;">
+							</span>
+							<span class="menu-title">sun</span>
+							<i class="menu-arrow"></i>
+						</a>
+						<div class="collapse" id="telco-sun"><ul id="sub-menu-sun" class="nav flex-column sub-menu"></ul></div>
+					</li>
+					<li class="nav-item menu-items">
+						<a class="nav-link" data-toggle="collapse" data-target="#telco-dito" aria-expanded="false" aria-controls="telco-dito">
+							<span class="menu-icon">
+								<img src="./WiFi5-Soft_ Client_files/dito.png" alt="logo" style="object-fit: cover; width: 24px; height: 24px; background: white; border-radius: 100%;">
+							</span>
+							<span class="menu-title">dito</span>
+							<i class="menu-arrow"></i>
+						</a>
+						<div class="collapse" id="telco-dito"><ul id="sub-menu-dito" class="nav flex-column sub-menu"></ul></div>
+					</li>
+				</ul>
+            </div>
+		  </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="http://10.0.0.1/client?page=logs">
+              <span class="menu-icon">
+                <i class="mdi mdi-format-align-justify"></i>
+              </span>
+              <span class="menu-title">Logs</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="container-fluid page-body-wrapper">
+        <nav class="navbar p-0 fixed-top d-flex flex-row" style="">
+          <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+            <a class="navbar-brand brand-logo-mini" href="http://10.0.0.1/client?page=dashboard">
+              <img src="./WiFi5-Soft_ Client_files/logo.png" alt="logo" style="object-fit: cover;">
+            </a>
+          </div>
+          <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+              <span class="mdi mdi-menu"></span>
+            </button>
+            <ul class="navbar-nav w-100"></ul>
+            <ul class="navbar-nav navbar-nav-right">
+					 <li class="nav-item dropdown border-left">
+						<a class="nav-link" href="http://10.0.0.1/apk/wifi5-softweb.apk">
+						   <i class="mdi mdi-android" style="color: #00d600;"></i>
+						</a>
+					 </li>
+                     <li class="nav-item dropdown border-left" style="height: 35px; padding-left: 5px; display: flex; align-items: center;">
+                        <span id="credit" class="menu-title" style="white-space: nowrap; font-size: 18px;">₱ 0.00</span>
+                     </li>
+                  </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+              <span class="mdi mdi-format-line-spacing"></span>
+            </button>
+          </div>
+        </nav>
+        <div class="main-panel">
+          <div id="conntent" class="content-wrapper"><div class="row g-4"><div class="col-lg-12 grid-margin stretch-card"><div class="card"><div class="card-body" style="padding: 10px;"><h4 class="card-title" style="margin-bottom: 2px;">Bandwidth Monitor</h4><div id="graph" class="bg-gray-dark" style="width: 100%; min-width: 50px; min-height: 130px; font-size: 14px; padding: 0px; position: relative; height: 128.094px;"><canvas class="flot-base" width="1072" height="130" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 1072px; height: 130px;"></canvas><div class="flot-text" style="position: absolute; inset: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; inset: 0px;"><div style="position: absolute; top: 116px; font: 400 11px / 13px Rubik, sans-serif; color: rgb(163, 163, 163); left: 9px; text-align: right;">0 B</div><div style="position: absolute; top: 78px; font: 400 11px / 13px Rubik, sans-serif; color: rgb(163, 163, 163); left: 0px; text-align: right;">2 MB</div><div style="position: absolute; top: 40px; font: 400 11px / 13px Rubik, sans-serif; color: rgb(163, 163, 163); left: 0px; text-align: right;">4 MB</div><div style="position: absolute; top: 2px; font: 400 11px / 13px Rubik, sans-serif; color: rgb(163, 163, 163); left: 0px; text-align: right;">6 MB</div></div></div><canvas class="flot-overlay" width="1072" height="130" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 1072px; height: 130px;"></canvas><div class="legend"><table style="position:absolute;top:13px;right:13px;;font-size:smaller;color:#a3a3a3"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(0,0,255);overflow:hidden"></div></div></td><td class="legendLabel"><i style="margin-right: 5px">Upload</i>121.09 KB</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(255,0,0);overflow:hidden"></div></div></td><td class="legendLabel"><i style="margin-right: 5px">Download</i>4.62 MB</td></tr></tbody></table></div></div><div id="total-rx-tx" style="margin-top: 5px; font-size: 13px; text-align: right; display: flex; justify-content: flex-end;"><div class="text-success">Total Bandwidth:</div> ↑ 29.89 MB ↓ 913.58 MB</div></div></div></div></div><div class="row g-4"><div class="col-lg-4 grid-margin" id="col-row"><div class="card" style="min-height: 86px; margin-bottom: 10px;"><h4 class="card-title" id="title-status" style="display: flex; border-bottom: 1px solid; padding: 5px; margin: 5px 10px;"><div style="margin-right: 5px;">Status:</div><div class="text-success">Connected</div></h4><div class="card-body" style="display: flex; padding: 16px 20px; justify-content: space-around;"><div style="margin-right: 20px; width: 65%; display: grid; justify-content: center; padding-left: 15px;"><div class="row" style="align-content: flex-end;"><div class="d-flex align-items-center align-self-start"><h3 class="mb-0 text-success" id="client-duration" style="text-transform: uppercase;">00:54:16</h3></div></div><h6 class="text-muted font-weight-normal">Current Duration</h6>  <button type="button" id="free-t" class="btn btn-outline-warning btn-fw" style="display: none; min-width: 100px; text-decoration: underline;">Free Time</button> <div id="voucher-box" style="display: none;"><div class="row"><div class="d-flex align-items-center align-self-start"><h4 class="mb-0 text-success" id="client-voucher"></h4></div></div><h6 class="text-muted font-weight-normal">Voucher</h6></div>   </div><div style="display: grid; align-content: center;"><button id="loginout" type="button" class="btn btn-outline-warning btn-icon-text" style="font-size: 18px; display: block; white-space: nowrap; height: 45px;">Pause <i class="mdi mdi-lan-connect btn-icon-append"></i></button><button id="v-ext" type="button" class="btn btn-outline-info btn-icon-text" style="margin-top: 10px; font-size: 18px; display: block; white-space: nowrap; height: 45px;">Extend<i class="mdi mdi mdi-lan btn-icon-append"></i></button><div style="display: flex; flex-direction: column; font-size: 12px; align-items: center; margin-top: 3px; color: #6e6e85;"><div>Reserve Duration</div><div id="reserve-dur">00:00:00</div></div></div></div></div><div class="card" style="min-height: 86px;"><div class="card-body" style="display: flex; padding: 10px 20px; justify-content: space-around;"><div style="margin-right: 20px; width: 75%; display: grid; justify-content: center; padding-left: 15px;"><div class="row" style="align-content: flex-end;"><div class="d-flex align-items-center align-self-start"><h3 class="mb-0 text-info" id="client-credit">₱ 0.00</h3></div></div><h6 class="text-muted font-weight-normal">Balance</h6> <div id="progress"></div> <div id="select-box" style=""><div class="row"><div class="d-flex align-items-center align-self-start"><button class="btn btn-outline-success dropdown-toggle" type="button" id="select-box-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="main">MainVendo</button><div id="select-dropdown-options" class="dropdown-menu" aria-labelledby="select-box-dropdown"><h6 style="border-bottom: 1px solid #2c2e33;" class="dropdown-header" name="main">MainVendo</h6></div></div></div><h6 class="text-muted font-weight-normal">Select Box</h6></div>  </div><div id="insert-btn-parent" style="display: grid; align-items: center;"><button id="client-insert-coin" class="btn btn-outline-warning btn-icon-text" style="height: fit-content;"><i class="mdi mdi-coin btn-icon-prepend mdi-48px"></i><span id="insert1" class="d-inline-block text-left blink" style="margin: auto; font-size: 18px; font-weight: bold;">INSERT COIN</span></button></div></div></div></div><div class="col-lg-4 grid-margin stretch-card"><div class="card"><div class="card-body" style="padding: 10px; font-size: 15px;"><div id="client-more-btn" class="bg-gray-dark row"><div style="width: 50%; padding: 5px 10px;"><button type="button" class="btn btn-outline-danger btn-icon-text" style="width: 100%; display: block; white-space: nowrap;">Credit Code<i class="mdi mdi-credit-card btn-icon-append"></i></button></div><div style="width: 50%; padding: 5px 10px;"><button type="button" class="btn btn-outline-danger btn-icon-text" style="width: 100%; display: block; white-space: nowrap;">Gen Voucher<i class="mdi mdi-barcode-scan btn-icon-append"></i></button></div><div style="width: 50%; padding: 5px 10px;"><a id="open-eload" class="btn btn-outline-info btn-icon-text" style="width: 100%; display: block; white-space: nowrap;">Buy Load<i class="mdi mdi-ticket btn-icon-append"></i></a></div><div style="width: 50%; padding: 5px 10px;"><button type="button" class="btn btn-outline-warning btn-icon-text" style="width: 100%; display: block; white-space: nowrap;">Extend-Via Voucher</button></div></div></div></div></div><div class="col-lg-4 grid-margin stretch-card" id="client-info-box"><div class="card"><div class="card-body" style="padding: 10px; font-size: 15px;"><h4 class="card-title" style="border-bottom: 1px solid;">Client Info</h4><div id="client-info-card" class="bg-gray-dark"><div style="display: flex;"><div class="text-success" style="margin-right: 10px;">Internet Status:</div><div id="client-system-internet">Up</div></div><div style="display: flex;"><div class="text-success" style="margin-right: 10px;">Status:</div><div id="client-status">Connected</div></div><div style="display: flex;"><div class="text-success" style="margin-right: 10px;">Interface:</div><div id="client-interface">eth1</div></div><div style="display: flex;"><div class="text-success" style="margin-right: 10px;">ID:</div><div id="client-id">DkhTzn7a</div></div><div style="display: flex;"><div class="text-success" style="margin-right: 10px;">MAC Address:</div><div id="client-mac">b0:fc:36:eb:9b:b1</div></div><div style="display: flex;"><div class="text-success" style="margin-right: 10px;">IP Address:</div><div id="client-ip">10.0.10.138</div></div><div style="display: flex;" id="upload-bandwidth-parent"><div class="text-success" style="margin-right: 10px;">Upload:</div><div id="upload-bandwidth">5 Mbps</div></div><div style="display: flex;" id="download-bandwidth-parent"><div class="text-success" style="margin-right: 10px;">Download:</div><div id="download-bandwidth">5 Mbps</div></div><div style="display: flex;"><div class="text-success" style="margin-right: 10px;">Reserve Duration:</div><div id="res-duration">00:00:00</div></div><div style="display: flex;" id="estimate-parent"><div class="text-success" style="margin-right: 10px;">Estimated Expiration:</div><div id="estimate">28/02/2025 07:32 am</div></div><div style="display: flex;"><div class="text-success" style="margin-right: 10px;">Date:</div><div id="date">28/02/2025 07:50 am</div></div><div style="display: flex;" id="uptime-parent"><div class="text-success" style="margin-right: 10px;">Uptime:</div><div id="uptime">00:36:48</div></div></div></div></div></div><div id="rates-card" class="col-lg-4 grid-margin stretch-card"><div class="card"><div class="card-body"><h4 class="card-title" style="margin-bottom: 5px;">MainVendo Rates</h4><div class="table-responsive"><table class="table"><thead><tr><th>Amount</th><th>Time</th></tr></thead><tbody id="rates-tbody"><tr><td>₱ 1.00</td><td> 12 Minutes  </td></tr><tr><td>₱ 6.00</td><td>1 Hour  12 Minutes  </td></tr><tr><td>₱ 11.00</td><td>2 Hours  12 Minutes  </td></tr><tr><td>₱ 21.00</td><td>4 Hours  12 Minutes  </td></tr><tr><td>₱ 51.00</td><td>10 Hours  12 Minutes  </td></tr><tr><td>₱ 101.00</td><td>20 Hours  12 Minutes  </td></tr><tr><td>₱ 501.00</td><td>4 Days 4 Hours  12 Minutes  </td></tr><tr><td>₱ 1001.00</td><td>8 Days 8 Hours  12 Minutes  </td></tr></tbody></table></div></div></div></div></div></div>
+          <footer class="footer">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">WiFi5-Soft <a class="text-primary" href="https://www.facebook.com/groups/196946467417134" target="_blank">Facebook Page</a><br> Developed By <a href="https://www.facebook.com/extrans.wifi5" target="_blank">J-Olive</a>
+                <br>
+                <a id="version"></a>
+              </span>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+	<div id="chati" class="chaticon text-success">
+      <i class="mdi mdi-wechat"></i>
+    </div>
+	<div id="spinner" class="spin" style="display: none;"><i class="fa fa-spinner fa-spin fa-3x fa-fw" style="top: calc(50% - 70px); left: calc(50% - 35px); position: fixed;"></i></div>
+	
+	<script type="text/javascript" src="./WiFi5-Soft_ Client_files/vendor.bundle.base.js.download"></script>
+    <script type="text/javascript" src="./WiFi5-Soft_ Client_files/off-canvas.js.download"></script>
+	<script type="text/javascript" src="./WiFi5-Soft_ Client_files/misc.js.download"></script>
+	<script type="text/javascript" src="./WiFi5-Soft_ Client_files/jquery.flot.min.js.download"></script>
+	<script type="text/javascript" src="./WiFi5-Soft_ Client_files/tools.js.download"></script>
+	<script type="text/javascript" src="./WiFi5-Soft_ Client_files/dashboard.js.download"></script>
+	<script type="text/javascript" src="./WiFi5-Soft_ Client_files/chat.js.download"></script>
+  
+</body></html>
